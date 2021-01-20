@@ -19,6 +19,7 @@ int * const p1 = q;	// constant pointer to int variable，指针不可变
 int const * p2 = q;	// pointer to constant int，int 不可变
 const int * p3 = q;	// pointer to constant int，int 不可变
 ```
+
 ### 初始化成员列表
 
 * 可以使用初始化成员列表对类中的成员进行初始化
@@ -101,8 +102,7 @@ class mycontainer <char> {
   * 移动赋值操作符重载 `ClassName & ClassName :: operator= ( ClassName && )`，这两种主要涉及使用 `std::move() `的情况。
   * 推荐使用 `shared_ptr` 等智能指针进行内存管理！
 
-
-### 基类和派生类：
+### 基类和派生类
 * 类对象作为参数传参，尽量使用引用或指针，可以避免拷贝开销，并考虑 `const` 原则
 * 基类的实例对象不能赋值给派生类，但派生类的实例可以赋值给基类，会进行 slicing，丢失派生类的一部分信息
 * 要使用多态（polymorphism），要满足：
